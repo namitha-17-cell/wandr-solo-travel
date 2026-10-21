@@ -1,0 +1,24 @@
+# Wandr demo script — what the video shows.
+# Each turn is typed into the demo UI against the real agent.
+# `narrate` describes the situation only; make_video.py appends what the decider actually decided.
+title: "Wandr — AI companion for solo travellers"
+pitch: "A solo travel companion that checks safety, builds itineraries and shares local tips, with Strands Decider choosing the right tool for every request."
+features:
+  - "solo travel safety ratings and essential tips for any destination"
+  - "day-by-day itinerary builder with budget estimates"
+  - "real-time local tips — things to do, eat and see right now"
+  - "live weather via open-meteo (no API key needed)"
+  - "Strands Decider 2B selects the right tool per request before the LLM runs"
+eager: false
+intro: "This is Wandr, an AI travel companion for solo travellers. It runs on Amazon Bedrock AgentCore Runtime. Before every reply, Strands Decider Two Billion reads the request and picks the right tool — safety check, itinerary builder, local tips or weather — so the agent is fast and focused."
+intro_normal: "This is Wandr, an AI companion for solo travellers. It runs locally for this demo. Strands Decider selects the right tool for every request before the language model responds."
+turns:
+  - say: "Is Bangkok safe for a solo female traveller?"
+    narrate: "A safety question — the decider should pick check_safety."
+  - say: "Plan me 3 days in Lisbon on a mid-range budget."
+    narrate: "A planning request — the decider should pick build_itinerary."
+  - say: "What should I do tonight in Tokyo?"
+    narrate: "A real-time local question — the decider should pick get_local_tips."
+  - say: "What's the weather in Reykjavik this week?"
+    narrate: "A weather question — the decider should pick get_weather."
+outro: "One forward pass per decision, a calibrated confidence score, and Amazon Bedrock for the conversation — Wandr answers faster and with fewer wasted tool calls."

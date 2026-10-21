@@ -1,0 +1,570 @@
+{
+ "decider_model": "strands-decider-2b-hobson-v19",
+ "rows": [
+  {
+   "i": 0,
+   "expected": {
+    "tool": "check_safety"
+   },
+   "decider": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 0.8546
+    }
+   },
+   "decider_ms": 1834.3670000031125,
+   "decider_server_ms": 1095.5,
+   "llm": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 5219.552700000349,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 1,
+   "expected": {
+    "tool": "check_safety"
+   },
+   "decider": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 0.8574
+    }
+   },
+   "decider_ms": 1697.154399997089,
+   "decider_server_ms": 979.6,
+   "llm": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9373.536799990688,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 2,
+   "expected": {
+    "tool": "check_safety"
+   },
+   "decider": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 0.7363
+    }
+   },
+   "decider_ms": 1678.7872000131756,
+   "decider_server_ms": 941.5,
+   "llm": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9334.04000000155,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 3,
+   "expected": {
+    "tool": "check_safety"
+   },
+   "decider": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 0.7647
+    }
+   },
+   "decider_ms": 1624.7270999883767,
+   "decider_server_ms": 1060.1,
+   "llm": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9350.638000003528,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 4,
+   "expected": {
+    "tool": "build_itinerary"
+   },
+   "decider": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 0.922
+    }
+   },
+   "decider_ms": 1695.7854000065709,
+   "decider_server_ms": 1036.5,
+   "llm": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9405.614400006016,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 5,
+   "expected": {
+    "tool": "build_itinerary"
+   },
+   "decider": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 0.9206
+    }
+   },
+   "decider_ms": 1545.9281000075862,
+   "decider_server_ms": 974.3,
+   "llm": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9283.530600005179,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 6,
+   "expected": {
+    "tool": "build_itinerary"
+   },
+   "decider": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 0.6346
+    }
+   },
+   "decider_ms": 1667.0024000050034,
+   "decider_server_ms": 1074.8,
+   "llm": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9788.040500003262,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 7,
+   "expected": {
+    "tool": "get_weather"
+   },
+   "decider": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 0.8392
+    }
+   },
+   "decider_ms": 1573.410099998,
+   "decider_server_ms": 944.6,
+   "llm": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9357.423599998583,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 8,
+   "expected": {
+    "tool": "get_weather"
+   },
+   "decider": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 0.8856
+    }
+   },
+   "decider_ms": 1678.4885999950347,
+   "decider_server_ms": 1066.9,
+   "llm": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9369.611199988867,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 9,
+   "expected": {
+    "tool": "get_weather"
+   },
+   "decider": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 0.8726
+    }
+   },
+   "decider_ms": 1597.7691000007326,
+   "decider_server_ms": 952.1,
+   "llm": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9215.083000002778,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 10,
+   "expected": {
+    "tool": "get_local_tips"
+   },
+   "decider": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 0.4755
+    }
+   },
+   "decider_ms": 1532.3023999953875,
+   "decider_server_ms": 945.7,
+   "llm": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9474.631000004592,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 11,
+   "expected": {
+    "tool": "get_local_tips"
+   },
+   "decider": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 0.7012
+    }
+   },
+   "decider_ms": 1784.6849999914411,
+   "decider_server_ms": 1107.9,
+   "llm": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9431.156999999075,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 12,
+   "expected": {
+    "tool": "check_safety"
+   },
+   "decider": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 0.8256
+    }
+   },
+   "decider_ms": 1620.5240999988746,
+   "decider_server_ms": 959.4,
+   "llm": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9193.22000000102,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 13,
+   "expected": {
+    "tool": "check_safety"
+   },
+   "decider": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 0.8706
+    }
+   },
+   "decider_ms": 1861.3734999962617,
+   "decider_server_ms": 1089.0,
+   "llm": {
+    "tool": {
+     "label": "check_safety",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9409.540799999377,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 14,
+   "expected": {
+    "tool": "build_itinerary"
+   },
+   "decider": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 0.8854
+    }
+   },
+   "decider_ms": 1644.4421999913175,
+   "decider_server_ms": 1097.5,
+   "llm": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9152.781700002379,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 15,
+   "expected": {
+    "tool": "build_itinerary"
+   },
+   "decider": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 0.7829
+    }
+   },
+   "decider_ms": 1593.6041999957524,
+   "decider_server_ms": 967.4,
+   "llm": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9353.509399996256,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 16,
+   "expected": {
+    "tool": "get_weather"
+   },
+   "decider": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 0.8199
+    }
+   },
+   "decider_ms": 1598.3674000017345,
+   "decider_server_ms": 966.2,
+   "llm": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9257.222900007037,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 17,
+   "expected": {
+    "tool": "get_weather"
+   },
+   "decider": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 0.8516
+    }
+   },
+   "decider_ms": 1696.0055000090506,
+   "decider_server_ms": 1092.5,
+   "llm": {
+    "tool": {
+     "label": "get_weather",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9321.05880000745,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 18,
+   "expected": {
+    "tool": "get_local_tips"
+   },
+   "decider": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 0.8697
+    }
+   },
+   "decider_ms": 1451.5688999963459,
+   "decider_server_ms": 962.7,
+   "llm": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9464.914700001827,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 19,
+   "expected": {
+    "tool": "get_local_tips"
+   },
+   "decider": {
+    "tool": {
+     "label": "build_itinerary",
+     "confidence": 0.4278
+    }
+   },
+   "decider_ms": 1671.2360000092303,
+   "decider_server_ms": 1076.3,
+   "llm": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9460.408400002052,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 20,
+   "expected": {
+    "tool": "none"
+   },
+   "decider": {
+    "tool": {
+     "label": "none",
+     "confidence": 0.7441
+    }
+   },
+   "decider_ms": 1691.7430000030436,
+   "decider_server_ms": 977.0,
+   "llm": {
+    "tool": {
+     "label": "none",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9673.650500000804,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 21,
+   "expected": {
+    "tool": "none"
+   },
+   "decider": {
+    "tool": {
+     "label": "none",
+     "confidence": 0.5815
+    }
+   },
+   "decider_ms": 1582.8708000044571,
+   "decider_server_ms": 1072.3,
+   "llm": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 0.9
+    }
+   },
+   "llm_ms": 9454.603100006352,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 22,
+   "expected": {
+    "tool": "get_local_tips"
+   },
+   "decider": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 0.4869
+    }
+   },
+   "decider_ms": 1701.6521000041394,
+   "decider_server_ms": 1060.6,
+   "llm": {
+    "tool": {
+     "label": "get_local_tips",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9448.443900007987,
+   "llm_cost": 0.0
+  },
+  {
+   "i": 23,
+   "expected": {
+    "tool": "check_safety"
+   },
+   "decider": {
+    "tool": {
+     "label": "none",
+     "confidence": 0.8658
+    }
+   },
+   "decider_ms": 1506.5522999939276,
+   "decider_server_ms": 933.9,
+   "llm": {
+    "tool": {
+     "label": "none",
+     "confidence": 1.0
+    }
+   },
+   "llm_ms": 9940.74200000614,
+   "llm_cost": 0.0
+  }
+ ],
+ "summary": {
+  "decider": {
+   "accuracy": 0.9167,
+   "decisions": 24,
+   "per_question": {
+    "tool": 0.9167
+   },
+   "latency_p50_ms": 1667.0,
+   "latency_p95_ms": 1834.4,
+   "usd_per_1k_decisions": 0.035,
+   "confident_share": 0.7917,
+   "accuracy_when_confident": 0.9474,
+   "sent_to_human_at_threshold": 5
+  },
+  "llm": {
+   "accuracy": 0.9167,
+   "decisions": 24,
+   "per_question": {
+    "tool": 0.9167
+   },
+   "latency_p50_ms": 9373.5,
+   "latency_p95_ms": 9788.0,
+   "usd_per_1k_decisions": 0.0,
+   "confident_share": 1.0,
+   "accuracy_when_confident": 0.9167,
+   "sent_to_human_at_threshold": 0
+  },
+  "speedup_p50": 5.62
+ },
+ "threshold": 0.7,
+ "llm_model": "qwen3.5-4b",
+ "llm_provider": "ugmdu",
+ "llm_where": "AWS User Group Madurai cloud (qwen3.5-4b)",
+ "decider_url": "https://da25tnxy06gjk.cloudfront.net",
+ "decider_mode": "ugmdu",
+ "ran_at": 1792565102.2077146,
+ "split": "all"
+}

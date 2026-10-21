@@ -1,0 +1,24 @@
+{"state": "User request: Is Bangkok safe for a solo female traveller?", "expected": {"tool": "check_safety"}, "split": "tune"}
+{"state": "User request: What's the safety situation in Medellín for someone travelling alone?", "expected": {"tool": "check_safety"}, "split": "tune"}
+{"state": "User request: Should I be worried about crime in Lisbon?", "expected": {"tool": "check_safety"}, "split": "tune"}
+{"state": "User request: Is Reykjavik safe to visit solo in winter?", "expected": {"tool": "check_safety"}, "split": "tune"}
+{"state": "User request: Plan my 5 days in Tokyo on a budget.", "expected": {"tool": "build_itinerary"}, "split": "tune"}
+{"state": "User request: Can you build a 3-day itinerary for Lisbon? I have a mid-range budget.", "expected": {"tool": "build_itinerary"}, "split": "tune"}
+{"state": "User request: I have 5 days in Medellín, what should I do?", "expected": {"tool": "build_itinerary"}, "split": "tune"}
+{"state": "User request: What's the weather like in Bangkok this week?", "expected": {"tool": "get_weather"}, "split": "tune"}
+{"state": "User request: Will it rain in Reykjavik tomorrow?", "expected": {"tool": "get_weather"}, "split": "tune"}
+{"state": "User request: What's the temperature in Lisbon right now?", "expected": {"tool": "get_weather"}, "split": "tune"}
+{"state": "User request: What should I do tonight in Tokyo?", "expected": {"tool": "get_local_tips"}, "split": "tune"}
+{"state": "User request: Any good local food spots in Bangkok I shouldn't miss?", "expected": {"tool": "get_local_tips"}, "split": "tune"}
+{"state": "User request: Is Tokyo safe for solo travel?", "expected": {"tool": "check_safety"}, "split": "test"}
+{"state": "User request: I'm a solo woman, is Medellín safe for me?", "expected": {"tool": "check_safety"}, "split": "test"}
+{"state": "User request: Give me a 3-day plan for Bangkok, I'm on a tight budget.", "expected": {"tool": "build_itinerary"}, "split": "test"}
+{"state": "User request: Build me a 5-day itinerary for Reykjavik.", "expected": {"tool": "build_itinerary"}, "split": "test"}
+{"state": "User request: What's the weather forecast for Tokyo this week?", "expected": {"tool": "get_weather"}, "split": "test"}
+{"state": "User request: How hot is it in Medellín right now?", "expected": {"tool": "get_weather"}, "split": "test"}
+{"state": "User request: What are the best local tips for Lisbon tonight?", "expected": {"tool": "get_local_tips"}, "split": "test"}
+{"state": "User request: I'm in Reykjavik — what should I do today?", "expected": {"tool": "get_local_tips"}, "split": "test"}
+{"state": "User request: What documents do I need to travel to Japan as a solo backpacker?", "expected": {"tool": "none"}, "split": "test"}
+{"state": "User request: What should I pack for a solo trip to Iceland in winter?", "expected": {"tool": "none"}, "split": "test"}
+{"state": "User request: What's a good hidden gem in Lisbon that tourists miss?", "expected": {"tool": "get_local_tips"}, "split": "test"}
+{"state": "User request: What's the cheapest time of year to visit Bangkok?", "expected": {"tool": "check_safety"}, "split": "test"}

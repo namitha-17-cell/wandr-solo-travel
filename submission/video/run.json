@@ -1,0 +1,122 @@
+[
+ {
+  "start": 5.0193939208984375,
+  "end": 38.089706897735596,
+  "out": {
+   "reply": "Bangkok has a solid **6/10 safety rating** specifically for solo female travellers. It\u2019s generally quite pleasant, but vigilance is key.\n\nHere is the practical advice to keep you safe:\n*   **Transport:** Download the Grab app and use it for all car rides; avoid unmarked taxis at night. The BTS Skytrain is extremely reliable and safe in itself.\n*   **Accommodation:** Keep your passport (and a copy of it) with you, but get a key card if possible before heading out for drinks.\n*   **Nightlife & Culture:** Be cautious with strangers on busy street corners\u2014grabbing your drink from the bar is an excellent safety routine. Also, dress modestly for temples to respect local customs and stay compliant with regulations.\n\n**Pro Tip:** The best time to visit without humidity or monsoons is **November through February**.\n\nDo you have a specific neighborhood or hotel area in mind for the start of your trip?",
+   "decisions": [
+    {
+     "pattern": "#tool-selection",
+     "tool_selected": "check_safety",
+     "confidence": 0.897,
+     "narrowed": true,
+     "probabilities": {
+      "check_safety": 0.897,
+      "build_itinerary": 0.011,
+      "get_local_tips": 0.006,
+      "get_weather": 0.004,
+      "none": 0.082
+     },
+     "verdict": "check_safety",
+     "decider_ms": 1932.369899994228
+    }
+   ],
+   "model_id": "qwen3.5-4b",
+   "latency_ms": 29335,
+   "agent": "Wandr \u2014 AI companion for solo travellers",
+   "eager": false
+  },
+  "say": "Is Bangkok safe for a solo female traveller?",
+  "narrate": "A safety question \u00e2\u20ac\u201d the decider should pick check_safety."
+ },
+ {
+  "start": 38.089706897735596,
+  "end": 89.22340774536133,
+  "out": {
+   "reply": "Here\u2019s a warm 3-day solo travel plan for Lisbon on a mid-range budget (approx. $100/day):\n\n**Day 1: Alfama & The Waterfront**\n*   **Morning:** Explore the charming, narrow streets of **Alfama** and enjoy views from S\u00e3o Jorge Castle. It's perfect for finding a cozy spot to people-watch at your own pace.\n*   **Afternoon:** Head to the hip **LX Factory**, an artistic neighborhood with great cafes and trendy restaurants.\n*   **Evening:** Catch an authentic, affordable Fado performance in a local *tasca*.\n\n**Day 2: History & Flavors**\n*   **Morning:** Walk through historical landmarks at the **Bel\u00e9m Tower** and Jer\u00f3nimos Monastery.\n*   **Afternoon:** Enjoy your famous snack, **Past\u00e9is de Bel\u00e9m**, then hop on the Tram 28 (or take the bus to save a few bucks) to see the city from a different level.\n*   **Evening:** Dinner at **Time Out Market** offers excellent food options that cater to solo travelers and offer better prices than sit-down restaurants in touristy spots.\n\n**Day 3: The Royal Day Trip (Sintra)**\n*   **Morning:** Take the train to Sintra and visit the colorful **Pena Palace**.\n*   **Afternoon:** Explore the mysterious gardens of Quinta da Regaleira.\n*   **Evening:** Head back and unwind with a craft beer or wine at a local bar in Bairro Alto.\n\n**Safety Tip:** Even though Lisbon is generally safe, keep an eye out for pickpockets on the tram 28 and in crowded market areas like Time Out Market. Solo girls travel mostly unbothered if they stay alert. Enjoy your trip!",
+   "decisions": [
+    {
+     "pattern": "#tool-selection",
+     "tool_selected": "build_itinerary",
+     "confidence": 0.891,
+     "narrowed": true,
+     "probabilities": {
+      "check_safety": 0.015,
+      "build_itinerary": 0.891,
+      "get_local_tips": 0.007,
+      "get_weather": 0.006,
+      "none": 0.08
+     },
+     "verdict": "build_itinerary",
+     "decider_ms": 1604.340100006084
+    }
+   ],
+   "model_id": "qwen3.5-4b",
+   "latency_ms": 47467,
+   "agent": "Wandr \u2014 AI companion for solo travellers",
+   "eager": false
+  },
+  "say": "Plan me 3 days in Lisbon on a mid-range budget.",
+  "narrate": "A planning request \u00e2\u20ac\u201d the decider should pick build_itinerary."
+ },
+ {
+  "start": 89.22340774536133,
+  "end": 117.05895924568176,
+  "out": {
+   "reply": "Here are a few things solo travelers often enjoy doing in Tokyo for the night:\n\n*   **Hit an Izakaya for Dinner:** Grab dinner at *Nishi-Hiro* (Harajuku) or *Sukiyabashi Jiro* (Odaiba) for a unique experience.\n*   **Explore Shibuya Crossing:** Take photos as crowds flow through, then grab coffee in the neighboring Hachiko Park area.\n*   **Stay Local:** Visit the 24-hour convenience stores of Harajuku or Roppongi for late-night snacks and beverages.\n*   **Visit an Observatory:** Head to *Shibuya Sky* (book in advance) for stunning views over the city.\n\n**Safety Tip:** Solo travel in Tokyo is generally safe. However, avoid walking alone at night in less populated areas like *Akihabara* or *Tokyo Station*, as pickpocketing can occur in crowded spaces. Use an **Suica or PASMO card** for public transport to save time and navigate easily.\n\nWould you like more specific tips on any of these activities?",
+   "decisions": [
+    {
+     "pattern": "#tool-selection",
+     "tool_selected": "get_local_tips",
+     "confidence": 0.41,
+     "narrowed": false,
+     "probabilities": {
+      "check_safety": 0.069,
+      "build_itinerary": 0.401,
+      "get_local_tips": 0.41,
+      "get_weather": 0.012,
+      "none": 0.108
+     },
+     "verdict": "get_local_tips",
+     "decider_ms": 1814.931399989291
+    }
+   ],
+   "model_id": "qwen3.5-4b",
+   "latency_ms": 24635,
+   "agent": "Wandr \u2014 AI companion for solo travellers",
+   "eager": false
+  },
+  "say": "What should I do tonight in Tokyo?",
+  "narrate": "A real-time local question \u00e2\u20ac\u201d the decider should pick get_local_tips."
+ },
+ {
+  "start": 117.05895924568176,
+  "end": 146.35676550865173,
+  "out": {
+   "reply": "Here's the weather in Reykjavik for this week:\n\n*   **Right Now:** It's chilly at **1.4\u00b0C** with light winds (**11.5 km/h**), but no rain right now.\n*   **Tomorrow (Oct 22):** Expect a significant change; there's a heavy chance of rain (**6.3mm**) and the temperature will stay low, ranging from 1.3\u00b0C to 5.3\u00b0C.\n*   **Wednesday (Oct 23):** Another rainy day is likely (**3.2mm**), with temperatures dropping to as low as **-1.3\u00b0C**.\n\n**Solo Travel Tip:** Since it's already windy and looking wet with freezing lows, make sure you have warm layers ready if you're heading out today! Enjoy exploring safely.",
+   "decisions": [
+    {
+     "pattern": "#tool-selection",
+     "tool_selected": "get_weather",
+     "confidence": 0.874,
+     "narrowed": true,
+     "probabilities": {
+      "check_safety": 0.02,
+      "build_itinerary": 0.014,
+      "get_local_tips": 0.021,
+      "get_weather": 0.874,
+      "none": 0.071
+     },
+     "verdict": "get_weather",
+     "decider_ms": 1852.9030999925453
+    }
+   ],
+   "model_id": "qwen3.5-4b",
+   "latency_ms": 25809,
+   "agent": "Wandr \u2014 AI companion for solo travellers",
+   "eager": false
+  },
+  "say": "What's the weather in Reykjavik this week?",
+  "narrate": "A weather question \u00e2\u20ac\u201d the decider should pick get_weather."
+ }
+]

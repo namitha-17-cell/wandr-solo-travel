@@ -1,0 +1,94 @@
+{
+ "pattern_tag": "#tool-selection",
+ "agentcore_features": [],
+ "pattern_doc": "REUSABLE DECISION PATTERN: solo-travel tool selection  (#tool-selection)\n\nWhat it does\n    Before every Wandr agent turn, Strands Decider 2B reads the traveller's request and picks\n    the one tool most likely to answer it:\n    - check_safety    \u00e2\u2020\u2019 safety ratings and essential tips for a destination\n    - build_itinerary \u00e2\u2020\u2019 day-by-day plans with budget estimates\n    - get_local_tips  \u00e2\u2020\u2019 things to do, eat and see right now\n    - get_weather     \u00e2\u2020\u2019 live 3-day forecast\n    - none            \u00e2\u2020\u2019 the agent can answer directly (e.g. packing list, visa info)\n    When the decider is confident (\u00e2\u2030\u00a5 0.6) it hands the agent only that tool, cutting token\n    use and wrong-tool calls. Below the threshold every tool is kept and the LLM chooses.\n\nTyped questions and options\n    `tool` (choice): one option per tool, labelled by its one-line docstring, plus `none`.\n    Built dynamically from TOOLS by `questions_for` in decider_kit.patterns.tool_selection \u00e2\u20ac\u201d\n    no retraining needed when a tool is added.\n\nWiring\n    `WandrSelector` wraps `ToolSelector` and is called in `HackathonAgent.chat` before\n    the Strands Agent is created for each turn:\n\n        selector = WandrSelector(decider)\n        agent = selector.agent_for(message, model=agent_model(), system_prompt=SYSTEM_PROMPT,\n                                   callback_handler=None)\n        result = agent(message)\n\n    The selection log (`selector.log`) is forwarded to the `decisions` list in the chat\n    response so the demo UI and the benchmark can inspect it.\n\nHow to reuse it\n    Copy this file, replace TOOLS with your own list of Strands @tool functions, and adjust\n    the threshold if needed. Every tool needs a clear one-line docstring \u00e2\u20ac\u201d that becomes the\n    option description the decider reads.",
+ "questions_code": "QUESTIONS = questions_for(TOOLS)",
+ "agent_md": "# Use case\n\n- **Pitch:** an AI companion for solo travellers that checks safety, builds itineraries and surfaces local tips \u00e2\u20ac\u201d with Strands Decider 2B picking the right tool for every request.\n- **Who it is for:** solo travellers planning a trip or already on the road, who want fast, relevant answers without wading through generic travel sites.\n- **Features:**\n  - solo-travel safety ratings and tips for any destination;\n  - day-by-day itinerary builder with budget awareness;\n  - real-time local tips (things to do, eat and see right now);\n  - live weather for any destination (open-meteo, no key needed);\n  - Strands Decider 2B selects the right tool per request so the LLM never wastes a call;\n  - a live decision panel in the demo UI that shows which tool was chosen and with what confidence;\n  - deployed on Amazon Bedrock AgentCore Runtime.\n- **The decision handed to Strands Decider 2B:** before every agent turn, which tool best matches what the traveller is asking? (`#tool-selection`)\n- **Why a decision model:** tool selection runs on every request, so it must be fast and cheap; a calibrated confidence score lets the agent fall back gracefully when the request is ambiguous.\n- **Amazon Bedrock:** the conversation and tool use (Amazon Nova Pro by default).\n",
+ "llm_provider_local_runs": "bedrock",
+ "agent_name": "Wandr \u00e2\u20ac\u201d AI companion for solo travellers",
+ "bench": {
+  "summary": {
+   "decider": {
+    "accuracy": 0.9167,
+    "decisions": 24,
+    "per_question": {
+     "tool": 0.9167
+    },
+    "latency_p50_ms": 2514.2,
+    "latency_p95_ms": 7264.6,
+    "usd_per_1k_decisions": 0.035,
+    "confident_share": 0.7917,
+    "accuracy_when_confident": 0.9474,
+    "sent_to_human_at_threshold": 5
+   },
+   "llm": {
+    "accuracy": null,
+    "decisions": 0,
+    "per_question": {},
+    "latency_p50_ms": null,
+    "latency_p95_ms": null,
+    "usd_per_1k_decisions": 0.0,
+    "confident_share": null,
+    "accuracy_when_confident": null,
+    "sent_to_human_at_threshold": 0
+   }
+  },
+  "decider_model": "strands-decider-2b-hobson-v19",
+  "decider_mode": "ugmdu",
+  "llm_model": "us.amazon.nova-lite-v1:0",
+  "cases": 24,
+  "split": "all",
+  "threshold": 0.7
+ },
+ "bench_table": "Decider: strands-decider-2b-hobson-v19 (ugmdu). 24 labelled cases, 24 decisions.\n\n| | Strands Decider 2B | us.amazon.nova-lite-v1:0 |\n|---|---|---|\n| Accuracy | 91.7% | - |\n| Latency p50 per decision | 2514 ms | - |\n| Latency p95 | 7265 ms | - |\n| Cost per 1,000 decisions | $0.0350 | $0.0000 |\n| Answered alone at confidence >= 0.7 | 79% | - |\n| Accuracy when confident | 94.7% | - |\n",
+ "demo_turns": [
+  {
+   "user": "My headphones are broken, I want my money back.",
+   "reply": "Please provide the order ID for the headphones so I can process your refund.",
+   "decisions": [
+    {
+     "pattern": "#guardrails",
+     "tool": "refund_order",
+     "args": {
+      "amount": 249.0,
+      "order_id": "A1002"
+     },
+     "args_grounded": 0.437,
+     "explicit_request": 0.791,
+     "premature": 0.235,
+     "decider_ms": 3075,
+     "verdict": "guide"
+    }
+   ],
+   "latency_ms": 6970
+  },
+  {
+   "user": "It's order A1002, refund the full amount please.",
+   "reply": "Your refund for order A1002 has been processed. You will receive 249.0 back to your original payment method. If you have any further questions, feel free to ask.",
+   "decisions": [
+    {
+     "pattern": "#guardrails",
+     "tool": "refund_order",
+     "args": {
+      "amount": 249,
+      "order_id": "A1002"
+     },
+     "args_grounded": 0.608,
+     "explicit_request": 0.894,
+     "premature": 0.128,
+     "decider_ms": 3894,
+     "verdict": "proceed"
+    }
+   ],
+   "latency_ms": 5813
+  },
+  {
+   "user": "Is it possible to cancel an order after it ships?",
+   "reply": "Once an order has shipped, it cannot be cancelled. However, you can still request a refund after receiving the item. If you have any further questions, feel free to ask.",
+   "decisions": [],
+   "latency_ms": 940
+  }
+ ],
+ "repo_url": "",
+ "video_url": ""
+}
